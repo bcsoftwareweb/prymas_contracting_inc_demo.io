@@ -16,5 +16,8 @@ describe('Reusable components', () => {
     renderWithRouter(<Footer />)
     expect(screen.getByText('Website demo by B&C Software & Web.')).toBeInTheDocument()
     expect(screen.getByText(/© 2026 Prymas Contracting Inc/)).toBeInTheDocument()
+    expect(screen.getByLabelText('LinkedIn placeholder')).toBeInTheDocument()
+    expect(screen.getByLabelText('Instagram placeholder')).toBeInTheDocument()
+    expect(screen.getByLabelText('Facebook placeholder')).toBeInTheDocument()
   })
 })
