@@ -3,9 +3,11 @@ import { MarketCard } from '../markets/MarketCard'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeader } from '../ui/SectionHeader'
 
+import { WatermarkedSection } from '../layout/WatermarkedSection'
+
 export function MarketsSection() {
   return (
-    <section className="bg-charcoal-950 py-20 lg:py-28">
+    <WatermarkedSection tone="dark" className="bg-charcoal-950 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionHeader
           eyebrow="Markets"
@@ -25,6 +27,6 @@ export function MarketsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

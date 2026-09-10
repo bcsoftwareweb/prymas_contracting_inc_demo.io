@@ -3,6 +3,7 @@ import { navItems } from '../../data/nav'
 import { BC_CREDIT, BC_LOGO_DARK, SITE_EMAIL, SITE_LOCATION, SITE_NAME, SITE_PHONE } from '../../config'
 import { formatPhoneHref } from '../../lib/cn'
 import { Logo } from '../ui/Logo'
+import { DemoWatermark } from './DemoWatermark'
 
 const socials = [
   { name: 'LinkedIn', icon: LinkedInIcon },
@@ -12,7 +13,8 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal-950 text-white">
+    <footer className="relative overflow-hidden bg-charcoal-950 text-white">
+      <DemoWatermark tone="dark" variant="section" />
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12 lg:px-10 lg:py-20">
         <div className="lg:col-span-5">
           <Logo />

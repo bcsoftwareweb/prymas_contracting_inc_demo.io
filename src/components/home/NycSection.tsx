@@ -2,6 +2,8 @@ import { serviceCoverage } from '../../data/coverage'
 import { images } from '../../data/images'
 import { SectionHeader } from '../ui/SectionHeader'
 
+import { WatermarkedSection } from '../layout/WatermarkedSection'
+
 const boroughs = [
   { name: 'Bronx', x: '42%', y: '8%' },
   { name: 'Manhattan', x: '28%', y: '28%' },
@@ -12,7 +14,7 @@ const boroughs = [
 
 export function NycSection() {
   return (
-    <section className="bg-charcoal-900 py-20 lg:py-28">
+    <WatermarkedSection tone="dark" className="bg-charcoal-900 py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:px-10">
         <div>
           <SectionHeader
@@ -70,6 +72,6 @@ export function NycSection() {
           </div>
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

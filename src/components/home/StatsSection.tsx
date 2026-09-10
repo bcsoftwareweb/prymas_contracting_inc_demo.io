@@ -1,9 +1,10 @@
 import { stats } from '../../data/stats'
 import { StatBlock } from '../stats/StatBlock'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function StatsSection() {
   return (
-    <section className="bg-charcoal-900 py-16 lg:py-20">
+    <WatermarkedSection tone="dark" className="bg-charcoal-900 py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.32em] text-copper-300">
           Sample company highlights
@@ -14,6 +15,6 @@ export function StatsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

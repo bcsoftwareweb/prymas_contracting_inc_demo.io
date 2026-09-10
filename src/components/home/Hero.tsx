@@ -1,10 +1,10 @@
 import { Button } from '../ui/Button'
 import { images } from '../../data/images'
-import { DemoWatermark } from '../layout/DemoWatermark'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-charcoal-950">
+    <WatermarkedSection tone="dark" variant="hero" className="min-h-screen bg-charcoal-950">
       <img
         src={images.hero}
         alt="Steel construction framework against an urban sky, representing commercial building work in New York"
@@ -12,7 +12,6 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/80 to-charcoal-950/25" />
       <div className="absolute inset-0 bg-charcoal-950/20" />
-      <DemoWatermark />
       <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 lg:px-10 lg:pb-24">
         <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-copper-300">
           Maspeth, Queens • New York City
@@ -32,6 +31,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

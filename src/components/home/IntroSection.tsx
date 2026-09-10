@@ -2,10 +2,11 @@ import { images } from '../../data/images'
 import { ImageWithFallback } from '../ui/ImageWithFallback'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeader } from '../ui/SectionHeader'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function IntroSection() {
   return (
-    <section className="bg-concrete-50 py-20 lg:py-28">
+    <WatermarkedSection className="bg-concrete-50 py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:px-10">
         <Reveal className="lg:col-span-6">
           <SectionHeader
@@ -48,6 +49,6 @@ export function IntroSection() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

@@ -6,6 +6,7 @@ import { images } from '../data/images'
 import { whyPrymas } from '../data/whyPrymas'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { ImageWithFallback } from '../components/ui/ImageWithFallback'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function About() {
   usePageMeta(
@@ -22,7 +23,7 @@ export function About() {
         image={images.crane}
         imageAlt="Construction team on a job site representing the Prymas approach"
       />
-      <section className="bg-white py-20 lg:py-28">
+      <WatermarkedSection className="bg-white py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:px-10">
           <Reveal className="lg:col-span-7">
             <SectionHeader
@@ -57,8 +58,8 @@ export function About() {
             />
           </Reveal>
         </div>
-      </section>
-      <section className="bg-concrete-50 py-20">
+      </WatermarkedSection>
+      <WatermarkedSection className="bg-concrete-50 py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <SectionHeader eyebrow="Values" title="How the work is approached." />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -72,8 +73,8 @@ export function About() {
             ))}
           </div>
         </div>
-      </section>
-      <section className="bg-white py-20">
+      </WatermarkedSection>
+      <WatermarkedSection className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <SectionHeader
             eyebrow="Local Presence"
@@ -93,7 +94,7 @@ export function About() {
             )}
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
       <CTASection />
     </>
   )

@@ -5,6 +5,7 @@ import { SectionHeader } from '../components/ui/SectionHeader'
 import { images } from '../data/images'
 import { processSteps } from '../data/process'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function Process() {
   usePageMeta(
@@ -21,7 +22,7 @@ export function Process() {
         image={images.process}
         imageAlt="Construction planning and field work representing the project process"
       />
-      <section className="bg-white py-20 lg:py-28">
+      <WatermarkedSection className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <SectionHeader
             eyebrow="How a project moves"
@@ -32,8 +33,8 @@ export function Process() {
             <ProcessTimelineLight />
           </div>
         </div>
-      </section>
-      <section className="bg-charcoal-950 py-20">
+      </WatermarkedSection>
+      <WatermarkedSection tone="dark" className="bg-charcoal-950 py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <ol className="grid gap-8 lg:grid-cols-5">
             {processSteps.map((step) => (
@@ -47,7 +48,7 @@ export function Process() {
             ))}
           </ol>
         </div>
-      </section>
+      </WatermarkedSection>
       <CTASection />
     </>
   )

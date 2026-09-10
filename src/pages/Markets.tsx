@@ -7,6 +7,7 @@ import { SectionHeader } from '../components/ui/SectionHeader'
 import { images } from '../data/images'
 import { markets } from '../data/markets'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function Markets() {
   const location = useLocation()
@@ -30,7 +31,7 @@ export function Markets() {
         image={images.skyline}
         imageAlt="Urban commercial skyline representing New York construction markets"
       />
-      <section className="bg-white py-20 lg:py-28">
+      <WatermarkedSection className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {markets.map((market) => (
@@ -47,7 +48,7 @@ export function Markets() {
             />
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
       <CTASection />
     </>
   )

@@ -1,4 +1,4 @@
-import { DemoWatermark } from '../layout/DemoWatermark'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 type PageHeroProps = {
   eyebrow?: string
@@ -10,14 +10,13 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, subtitle, image, imageAlt }: PageHeroProps) {
   return (
-    <section className="relative min-h-[58vh] overflow-hidden bg-charcoal-950 pt-24">
+    <WatermarkedSection tone="dark" variant="hero" className="min-h-[58vh] bg-charcoal-950 pt-24">
       <img
         src={image}
         alt={imageAlt}
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal-950 via-charcoal-950/80 to-charcoal-950/30" />
-      <DemoWatermark className="top-[28%]" />
       <div className="relative mx-auto flex min-h-[58vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 lg:px-10">
         {eyebrow && (
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-copper-300">
@@ -33,6 +32,6 @@ export function PageHero({ eyebrow, title, subtitle, image, imageAlt }: PageHero
           </p>
         )}
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

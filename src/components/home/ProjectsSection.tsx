@@ -5,6 +5,8 @@ import { ProjectFilterControls } from '../projects/ProjectFilter'
 import { Button } from '../ui/Button'
 import { SectionHeader } from '../ui/SectionHeader'
 
+import { WatermarkedSection } from '../layout/WatermarkedSection'
+
 type ProjectsSectionProps = {
   heading?: string
   showAllLink?: boolean
@@ -20,7 +22,7 @@ export function ProjectsSection({
   const visible = filterProjects(filter).slice(0, limit)
 
   return (
-    <section className="bg-concrete-50 py-20 lg:py-28">
+    <WatermarkedSection className="bg-concrete-50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
@@ -47,6 +49,6 @@ export function ProjectsSection({
           </div>
         )}
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

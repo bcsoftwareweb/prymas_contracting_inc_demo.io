@@ -1,10 +1,11 @@
 import { testimonials } from '../../data/testimonials'
 import { TestimonialCard } from '../testimonials/TestimonialCard'
 import { SectionHeader } from '../ui/SectionHeader'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <WatermarkedSection className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionHeader
           eyebrow="Feedback"
@@ -17,6 +18,6 @@ export function TestimonialsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

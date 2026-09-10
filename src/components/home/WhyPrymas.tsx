@@ -1,10 +1,11 @@
 import { whyPrymas } from '../../data/whyPrymas'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeader } from '../ui/SectionHeader'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function WhyPrymas() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <WatermarkedSection className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <SectionHeader
           eyebrow="Approach"
@@ -25,6 +26,6 @@ export function WhyPrymas() {
           ))}
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

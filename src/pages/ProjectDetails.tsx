@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button'
 import { ImageWithFallback } from '../components/ui/ImageWithFallback'
 import { getProject, getRelatedProjects } from '../data/projects'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { DemoWatermark } from '../components/layout/DemoWatermark'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 import { NotFound } from './NotFound'
 
 export function ProjectDetails() {
@@ -29,14 +29,13 @@ export function ProjectDetails() {
 
   return (
     <>
-      <section className="relative min-h-[70vh] overflow-hidden bg-charcoal-950 pt-24">
+      <WatermarkedSection tone="dark" variant="hero" className="min-h-[70vh] bg-charcoal-950 pt-24">
         <img
           src={project.image}
           alt={`${project.name} hero image`}
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/55 to-charcoal-950/20" />
-        <DemoWatermark className="top-[26%]" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 lg:px-10">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-copper-300">
             Featured Project
@@ -48,9 +47,9 @@ export function ProjectDetails() {
             {project.location} · {project.market}
           </p>
         </div>
-      </section>
+      </WatermarkedSection>
 
-      <section className="bg-white py-16 lg:py-24">
+      <WatermarkedSection className="bg-white py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:px-10">
           <div className="lg:col-span-4">
             <dl className="space-y-6 border-t border-charcoal-900/10 pt-8">
@@ -90,9 +89,9 @@ export function ProjectDetails() {
             </ul>
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
 
-      <section className="bg-concrete-50 py-16">
+      <WatermarkedSection className="bg-concrete-50 py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="font-display text-3xl uppercase tracking-wide text-charcoal-950">
             Project gallery
@@ -108,9 +107,9 @@ export function ProjectDetails() {
             ))}
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
 
-      <section className="bg-white py-16 lg:py-24">
+      <WatermarkedSection className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex items-end justify-between gap-6">
             <h2 className="font-display text-4xl uppercase tracking-wide text-charcoal-950">
@@ -129,7 +128,7 @@ export function ProjectDetails() {
             ))}
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
       <CTASection />
     </>
   )

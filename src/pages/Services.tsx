@@ -8,6 +8,7 @@ import { SectionHeader } from '../components/ui/SectionHeader'
 import { images } from '../data/images'
 import { services } from '../data/services'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function Services() {
   const location = useLocation()
@@ -31,7 +32,7 @@ export function Services() {
         image={images.steel}
         imageAlt="Construction workers coordinating commercial building activity"
       />
-      <section className="bg-white py-20 lg:py-28">
+      <WatermarkedSection className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => (
@@ -39,8 +40,8 @@ export function Services() {
             ))}
           </div>
         </div>
-      </section>
-      <section className="bg-concrete-50 py-20">
+      </WatermarkedSection>
+      <WatermarkedSection className="bg-concrete-50 py-20">
         <div className="mx-auto max-w-7xl space-y-20 px-5 sm:px-8 lg:px-10">
           {services.map((service, index) => (
             <article
@@ -67,7 +68,7 @@ export function Services() {
             </article>
           ))}
         </div>
-      </section>
+      </WatermarkedSection>
       <CTASection />
     </>
   )

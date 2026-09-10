@@ -1,10 +1,11 @@
 import { images } from '../../data/images'
 import { ProcessTimeline } from '../process/ProcessTimeline'
 import { SectionHeader } from '../ui/SectionHeader'
+import { WatermarkedSection } from '../layout/WatermarkedSection'
 
 export function ProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-charcoal-950 py-20 lg:py-28">
+    <WatermarkedSection tone="dark" className="bg-charcoal-950 py-20 lg:py-28">
       <img
         src={images.process}
         alt=""
@@ -22,6 +23,6 @@ export function ProcessSection() {
           <ProcessTimeline />
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

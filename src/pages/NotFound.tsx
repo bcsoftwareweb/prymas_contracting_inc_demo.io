@@ -1,5 +1,6 @@
 import { Button } from '../components/ui/Button'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function NotFound() {
   usePageMeta(
@@ -8,7 +9,11 @@ export function NotFound() {
   )
 
   return (
-    <section className="flex min-h-screen items-center bg-charcoal-950 px-5 pt-24 text-white">
+    <WatermarkedSection
+      tone="dark"
+      variant="hero"
+      className="flex min-h-screen items-center bg-charcoal-950 px-5 pt-24 text-white"
+    >
       <div className="mx-auto max-w-3xl py-24">
         <p className="text-[11px] uppercase tracking-[0.32em] text-copper-300">404</p>
         <h1 className="mt-6 font-display text-6xl uppercase leading-none tracking-wide sm:text-8xl">
@@ -25,6 +30,6 @@ export function NotFound() {
           </Button>
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }

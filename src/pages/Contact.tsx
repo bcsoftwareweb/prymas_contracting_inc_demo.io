@@ -4,6 +4,7 @@ import { SITE_EMAIL, SITE_LOCATION, SITE_NAME, SITE_PHONE } from '../config'
 import { images } from '../data/images'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { formatPhoneHref } from '../lib/cn'
+import { WatermarkedSection } from '../components/layout/WatermarkedSection'
 
 export function Contact() {
   usePageMeta(
@@ -20,7 +21,7 @@ export function Contact() {
         image={images.contact}
         imageAlt="Commercial interior used as the contact page visual"
       />
-      <section className="bg-concrete-50 py-16 lg:py-24">
+      <WatermarkedSection className="bg-concrete-50 py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:px-10">
           <aside className="bg-charcoal-950 p-8 text-white lg:col-span-4 lg:p-10">
             <p className="text-[11px] uppercase tracking-[0.28em] text-copper-300">
@@ -55,7 +56,7 @@ export function Contact() {
             <ContactForm />
           </div>
         </div>
-      </section>
+      </WatermarkedSection>
     </>
   )
 }

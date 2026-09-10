@@ -4,9 +4,11 @@ import { Button } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeader } from '../ui/SectionHeader'
 
+import { WatermarkedSection } from '../layout/WatermarkedSection'
+
 export function ServicesSection() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <WatermarkedSection className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
@@ -26,6 +28,6 @@ export function ServicesSection() {
           ))}
         </div>
       </div>
-    </section>
+    </WatermarkedSection>
   )
 }
