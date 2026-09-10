@@ -1,16 +1,21 @@
-import { BC_LOGO_LIGHT } from '../../config'
+import { BC_LOGO_DARK } from '../../config'
+import { cn } from '../../lib/cn'
 
-export function DemoWatermark() {
+type DemoWatermarkProps = {
+  className?: string
+}
+
+export function DemoWatermark({ className }: DemoWatermarkProps) {
   return (
-    <div
-      className="pointer-events-none fixed inset-0 z-[15] overflow-hidden"
+    <img
+      src={BC_LOGO_DARK}
+      alt=""
       aria-hidden="true"
-    >
-      <img
-        src={BC_LOGO_LIGHT}
-        alt=""
-        className="absolute left-1/2 top-[42%] w-[min(72vw,640px)] -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] opacity-[0.07] mix-blend-multiply select-none sm:w-[min(58vw,720px)]"
-      />
-    </div>
+      data-testid="bc-hero-watermark"
+      className={cn(
+        'pointer-events-none absolute right-4 top-[18%] z-10 w-[min(48vw,420px)] select-none opacity-[0.42] sm:right-8 sm:top-[20%] sm:w-[min(40vw,480px)] lg:right-12 lg:w-[min(36vw,520px)]',
+        className,
+      )}
+    />
   )
 }

@@ -17,7 +17,7 @@ describe('Reusable components', () => {
   it('renders footer navigation and demo credit', () => {
     renderWithRouter(<Footer />)
     expect(
-      screen.getByText('This demo and design belongs to B&C Software & Web'),
+      screen.getByText('This demo and design belongs to B&C Software & Web.'),
     ).toBeInTheDocument()
     expect(screen.getByText(/© 2026 Prymas Contracting Inc/)).toBeInTheDocument()
     expect(screen.getByLabelText('LinkedIn placeholder')).toBeInTheDocument()
@@ -34,8 +34,9 @@ describe('Reusable components', () => {
     )
 
     expect(screen.getByTestId('bc-demo-credit')).toHaveTextContent(
-      'This demo and design belongs to B&C Software & Web',
+      'This demo and design belongs to B&C Software & Web.',
     )
+    expect(screen.getByTestId('bc-hero-watermark')).toBeInTheDocument()
     expect(screen.getAllByAltText('B&C Software & Web').length).toBeGreaterThan(0)
   })
 })

@@ -5,6 +5,7 @@ import { Button } from '../components/ui/Button'
 import { ImageWithFallback } from '../components/ui/ImageWithFallback'
 import { getProject, getRelatedProjects } from '../data/projects'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { DemoWatermark } from '../components/layout/DemoWatermark'
 import { NotFound } from './NotFound'
 
 export function ProjectDetails() {
@@ -35,6 +36,7 @@ export function ProjectDetails() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/55 to-charcoal-950/20" />
+        <DemoWatermark className="top-[26%]" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 sm:px-8 lg:px-10">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-copper-300">
             Featured Project
