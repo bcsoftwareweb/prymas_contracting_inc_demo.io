@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { navItems } from '../../data/nav'
-import { SITE_EMAIL, SITE_LOCATION, SITE_NAME, SITE_PHONE } from '../../config'
+import { BC_CREDIT, BC_LOGO_DARK, SITE_EMAIL, SITE_LOCATION, SITE_NAME, SITE_PHONE } from '../../config'
 import { formatPhoneHref } from '../../lib/cn'
 import { Logo } from '../ui/Logo'
 
@@ -72,9 +72,12 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 pb-28 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-6 lg:px-10">
           <p>© 2026 {SITE_NAME}. All rights reserved.</p>
-          <p>Website demo by B&C Software & Web.</p>
+          <div className="flex items-center gap-3">
+            <img src={BC_LOGO_DARK} alt="B&C Software & Web" className="h-7 w-auto" />
+            <p>{BC_CREDIT}</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -14,3 +14,7 @@ export const DEFAULT_TITLE =
 
 export const DEFAULT_DESCRIPTION =
   'Prymas Contracting Inc. provides professional contracting, commercial construction, industrial construction, renovation, and construction management solutions in New York City.'
+
+export const BC_CREDIT = 'This demo and design belongs to B&C Software & Web'
+export const BC_LOGO_LIGHT = `${import.meta.env.BASE_URL}branding/bc-logo-light.png`
+export const BC_LOGO_DARK = `${import.meta.env.BASE_URL}branding/bc-logo-dark.png`
